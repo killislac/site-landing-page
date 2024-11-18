@@ -733,13 +733,31 @@ section,
   display: inline-block;
 }
 h2.especifico::before,
-h2.especifico::after{ 
+h2.especifico::after { 
   content: "";
   width: 50px;
   height: 2px;
   background: white;
   display: inline-block;
 }
+
+/* Responsividade */
+@media (max-width: 768px) { /* Para tablets e telas menores */
+  h2.especifico::before,
+  h2.especifico::after {
+    width: 30px; /* Diminui o tamanho */
+    height: 1.5px; /* Ajusta a espessura */
+  }
+}
+
+@media (max-width: 480px) { /* Para smartphones */
+  h2.especifico::before,
+  h2.especifico::after {
+    width: 20px; /* Ainda menor para telas pequenas */
+    height: 1px; /* Ajusta a espessura */
+  }
+}
+
 .section-title h2:before {
   margin: 0 15px 10px 0;
 }
@@ -757,7 +775,7 @@ h2.especifico::after{
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 80vh;
+  min-height: 87vh;
   position: relative;
   padding: 120px 0 60px 0;
   display: flex;
@@ -1359,3 +1377,260 @@ button:hover {
 
 
 
+/* Estilo geral da seção */
+#hero {
+  background-color: #eaf8f2; /* Fundo claro original */
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  animation: fadeIn 1s ease-out; /* Animação de fade-in */
+}
+
+/* Título */
+#hero h1 {
+  font-size: 3rem;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: #035f26;
+  margin-bottom: 20px;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+#hero h1 span {
+  color: #27ae60;
+}
+
+/* Subtítulo */
+#hero p {
+  font-size: 1.5rem;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  animation: slideInFromRight 1s ease-out;
+}
+
+/* Botão */
+#hero .btn {
+  background-color: #035f26;
+  color: #fff;
+  padding: 1.2rem 3rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave */
+}
+
+#hero .btn:hover {
+  background-color: #27ae60;
+  transform: translateY(-3px); /* Efeito de elevação */
+}
+
+#hero .btn i {
+  margin-left: 10px; /* Espaçamento entre o texto e o ícone */
+}
+
+/* Círculos */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 5px solid #27ae60;
+  opacity: 0.4; /* Opacidade para um efeito mais sutil */
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 20vw;
+  height: 20vw;
+  top: -10vw;
+  left: -10vw;
+}
+
+.circle-2 {
+  width: 15vw;
+  height: 15vw;
+  top: 20vw;
+  right: -8vw;
+}
+
+.circle-3 {
+  width: 25vw;
+  height: 25vw;
+  bottom: -15vw;
+  left: -15vw;
+}
+
+/* Elementos decorativos (cruzes, linhas, etc.) */
+.decor {
+  position: absolute;
+  font-size: 4vw;
+  font-weight: bold;
+  color: #27ae60;
+  opacity: 0.5;
+  animation: bounce 2s infinite;
+}
+
+.decor-1 {
+  top: 10vw;
+  left: 10%;
+}
+
+.decor-2 {
+  bottom: 20vw;
+  right: 10%;
+}
+
+.decor-3 {
+  top: 15vw;
+  left: 50%;
+  font-size: 6vw;
+  color: #e74c3c;
+  opacity: 0.6;
+  transform: translateX(-50%);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+
+  #hero p {
+    font-size: 1.2rem;
+  }
+
+  #hero .btn {
+    padding: 4vw 6vw;
+    font-size: 4vw;
+  }
+
+  .circle-1 {
+    width: 25vw;
+    height: 25vw;
+    top: -12vw;
+    left: -12vw;
+  }
+
+  .circle-2 {
+    width: 20vw;
+    height: 20vw;
+    top: 18vw;
+    right: -10vw;
+  }
+
+  .circle-3 {
+    width: 30vw;
+    height: 30vw;
+    bottom: -18vw;
+    left: -18vw;
+  }
+
+  .decor-1, .decor-2, .decor-3 {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 6rem;
+  }
+
+  #hero p {
+    font-size: 2.5rem;
+  }
+
+  #hero .btn {
+    padding: 5vw 8vw;
+    font-size: 5vw;
+  }
+
+  .circle-1 {
+    width: 30vw;
+    height: 30vw;
+    top: -15vw;
+    left: -15vw;
+  }
+
+  .circle-2 {
+    width: 25vw;
+    height: 25vw;
+    top: 22vw;
+    right: -12vw;
+  }
+
+  .circle-3 {
+    width: 35vw;
+    height: 35vw;
+    bottom: -20vw;
+    left: -20vw;
+  }
+
+  .decor-1, .decor-2, .decor-3 {
+    font-size: 8vw;
+  }
+}
