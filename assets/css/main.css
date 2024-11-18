@@ -753,7 +753,7 @@ h2.especifico::after {
 @media (min-width: 410px) and (max-width:768px) { /* Para smartphones */
   h2.especifico::before,
   h2.especifico::after {
-    width: 20px; /* Ainda menor para telas pequenas */
+    width: 10px; /* Ainda menor para telas pequenas */
     height: 1px; /* Ajusta a espessura */
   }
 }
