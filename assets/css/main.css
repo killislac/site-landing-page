@@ -760,7 +760,7 @@ h2.especifico::after {
 @media (min-width: 300px) and (max-width:409px) { /* Para smartphones */
   h2.especifico::before,
   h2.especifico::after {
-    width: 8px; /* Ainda menor para telas pequenas */
+    width: 10px; /* Ainda menor para telas pequenas */
     height: 1px; /* Ajusta a espessura */
   }
 }
@@ -1620,10 +1620,10 @@ button:hover {
 
 
 @media (min-width: 300px) and (max-width:409px) {
-  /* Para telas pequenas (smartphones) */
-  .section-title h2 {
-    font-size: 1.3rem; /* Reduz tamanho do título */
+  .section-title #titulo{
+    font-size: 1.2rem;
   }
+  /* Para telas pequenas (smartphones) */
   .section-title p {
     font-size: 1rem; /* Reduz tamanho do subtítulo */
   }
