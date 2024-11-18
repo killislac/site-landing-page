@@ -750,10 +750,17 @@ h2.especifico::after {
   }
 }
 
-@media (max-width: 480px) { /* Para smartphones */
+@media (max-width: 410px) { /* Para smartphones */
   h2.especifico::before,
   h2.especifico::after {
     width: 20px; /* Ainda menor para telas pequenas */
+    height: 1px; /* Ajusta a espessura */
+  }
+}
+@media (max-width: 300px) { /* Para smartphones */
+  h2.especifico::before,
+  h2.especifico::after {
+    width: 10px; /* Ainda menor para telas pequenas */
     height: 1px; /* Ajusta a espessura */
   }
 }
@@ -1556,19 +1563,6 @@ button:hover {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  #hero h1 {
-    font-size: 2.5rem;
-  }
-
-  #hero p {
-    font-size: 1.2rem;
-  }
-
-  #hero .btn {
-    padding: 4vw 6vw;
-    font-size: 4vw;
-  }
-
   .circle-1 {
     width: 25vw;
     height: 25vw;
@@ -1595,19 +1589,7 @@ button:hover {
   }
 }
 
-@media (max-width: 480px) {
-  #hero h1 {
-    font-size: 6rem;
-  }
-
-  #hero p {
-    font-size: 2.5rem;
-  }
-
-  #hero .btn {
-    padding: 5vw 8vw;
-    font-size: 5vw;
-  }
+@media (min-width: 300px) and (max-width:480px) {
 
   .circle-1 {
     width: 30vw;
@@ -1637,33 +1619,33 @@ button:hover {
 
 
 
-@media (max-width: 768px) {
-  h2.especifico {
-    font-size: 1.8rem; /* Reduz um pouco o tamanho do título */
+@media (min-width: 300px) and (max-width:409px) {
+  /* Para telas pequenas (smartphones) */
+  .section-title h2 {
+    font-size: 1.5rem; /* Reduz tamanho do título */
   }
+  .section-title p {
+    font-size: 1rem; /* Reduz tamanho do subtítulo */
+  }
+}
 
-  p {
-    font-size: 1rem; /* Ajusta o tamanho do texto para telas menores */
+@media (min-width: 410px) and (max-width: 768px) {
+  /* Para tablets */
+  .section-title h2 {
+    font-size: 1.8rem; /* Ajusta tamanho do título */
+  }
+  .section-title p {
+    font-size: 1.1rem; /* Ajusta tamanho do subtítulo */
   }
 }
 
-/* Responsividade para telas pequenas */
-@media (max-width: 410x) {
-  h2.especifico {
-    font-size: 1.5rem; /* Título menor em dispositivos pequenos */
+@media (min-width: 769px) {
+  /* Para telas grandes (desktops) */
+  .section-title h2 {
+    font-size: 2rem; /* Tamanho padrão */
   }
-
-  p {
-    font-size: 0.12rem; /* Texto ajustado para pequenos dispositivos */
-  }
-}
-@media (max-width: 320px ) {
-  h2.especifico {
-    font-size: 1.3rem; /* Título menor em dispositivos pequenos */
-  }
-
-  p {
-    font-size: 0.9rem; /* Texto ajustado para pequenos dispositivos */
+  .section-title p {
+    font-size: 1.2rem; /* Tamanho padrão */
   }
 }
 
@@ -1688,7 +1670,7 @@ button:hover {
   }
 }
 
-@media (max-width: 410px) {
+@media (min-width: 410px) and (max-width: 767px){
   .hero {
     min-height: 89vh;
   
@@ -1696,21 +1678,21 @@ button:hover {
   .circle-2 {
     width: 30vw;
     height: 30vw;
-    top: 22vw;
+    top: 30vw;
     right: -12vw;
   }
   .circle-3 {
-    width: 40vw;
-    height: 40vw;
-    top: 100vw;
+    width: 50vw;
+    height: 50vw;
+    top: 140vw;
     right: -12vw;
   }
   #hero h1.display-4 {
-    font-size: 1.5rem; /* Ajustando o título para smartphones */
+    font-size: 1.6rem; /* Ajustando o título para smartphones */
   }
   
   #hero p.lead {
-    font-size: 0.9rem; /* Ajustando o subtítulo para smartphones */
+    font-size: 1.2rem; /* Ajustando o subtítulo para smartphones */
   }
   
   #hero .btn-lg {
@@ -1719,17 +1701,29 @@ button:hover {
   }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 300px ) and (max-width: 409px){
+  .circle-2 {
+    width: 30vw;
+    height: 30vw;
+    top: 30vw;
+    right: -12vw;
+  }
+  .circle-3 {
+    width: 50vw;
+    height: 50vw;
+    top: 130vw;
+    right: -12vw;
+  }
   #hero h1.display-4 {
-    font-size: 1.5rem; /* Ajustando o título para telas pequenas */
+    font-size: 1.6rem; /* Ajustando o título para telas pequenas */
   }
   
   #hero p.lead {
-    font-size: 0.9rem; /* Ajustando o subtítulo para telas pequenas */
+    font-size: 1rem; /* Ajustando o subtítulo para telas pequenas */
   }
   
   #hero .btn-lg {
-    font-size: 0.8rem; /* Ajustando o botão para telas pequenas */
+    font-size: 0.9rem; /* Ajustando o botão para telas pequenas */
     padding: 6px 12px; /* Ajusta o tamanho do botão */
   }
 }
