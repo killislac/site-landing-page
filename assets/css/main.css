@@ -6,7 +6,7 @@
 }
 
 :root { 
-  --background-color: #ffffff; 
+  --background-color: #eaf8f2;; 
   --default-color: #212529; 
   --heading-color:#005420;
   --accent-color: #005e24;
@@ -413,7 +413,6 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
   font-size: 14px;
   position: relative;
 }
@@ -1357,3 +1356,6 @@ button:hover {
 #divflex2{
   padding-top: 20px;
 }
+
+
+

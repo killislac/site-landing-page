@@ -211,14 +211,18 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
   // Captura os valores do formulário
   const name = document.getElementById('name').value;
   const service = document.getElementById('service').value;
-  const date = document.getElementById('date').value;
+  const dateInput = document.getElementById('date').value;
   const message = document.getElementById('message').value;
-  
+
+  // Converte a data para o formato DD/MM/AAAA
+  const dateParts = dateInput.split('-');
+  const formattedDate = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
+
   // Número de WhatsApp do destinatário
   const phoneNumber = '5511966323162'; // Substitua com o número do WhatsApp (inclua o código do país)
   
   // Cria a mensagem para ser enviada
-  let whatsappMessage = `Olá, meu nome é ${name}. Gostaria de agendar uma consulta de ${service} para o dia ${date}.`;
+  let whatsappMessage = `Olá, meu nome é ${name}. Gostaria de agendar uma consulta de ${service} para o dia ${formattedDate}.`;
   if (message) {
       whatsappMessage += ` Mensagem adicional: ${message}`;
   }
@@ -229,3 +233,42 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
   // Redireciona o usuário para o WhatsApp com a mensagem pronta
   window.open(whatsappURL, '_blank');
 });
+// Inicializando o calendário com idioma português e formato brasileiro
+// Inicializa o Flatpickr
+flatpickr("#date", {
+  locale: "pt", // Define o idioma como português
+  onReady: function(selectedDates, dateStr, instance) {
+    // Adiciona estilos ao calendário após ele ser renderizado
+    const calendarContainer = instance.calendarContainer;
+    if (calendarContainer) {
+      calendarContainer.style.backgroundColor = "#eaf8f2"; // Fundo verde claro
+      calendarContainer.style.border = "1px solid #27ae60"; // Borda verde escuro
+      calendarContainer.style.borderRadius = "8px"; // Bordas arredondadas
+    }
+
+    // Estiliza os títulos e botões do mês
+    const currentMonth = calendarContainer.querySelector(".flatpickr-current-month");
+    if (currentMonth) {
+      currentMonth.style.color = "#035f26"; // Cor verde escuro
+    }
+
+    const navButtons = calendarContainer.querySelectorAll(".flatpickr-prev-month, .flatpickr-next-month");
+    navButtons.forEach(button => {
+      button.style.color = "#035f26"; // Botões de navegação em verde
+    });
+
+    // Estiliza os dias selecionados
+    const days = calendarContainer.querySelectorAll(".flatpickr-day");
+    days.forEach(day => {
+      day.addEventListener("mouseover", () => {
+        day.style.backgroundColor = "#2ecc71"; // Fundo verde mais escuro no hover
+        day.style.color = "white"; // Texto branco
+      });
+      day.addEventListener("mouseout", () => {
+        day.style.backgroundColor = ""; // Remove o fundo no hover
+        day.style.color = ""; // Remove a cor do texto no hover
+      });
+    });
+  }
+});
+
