@@ -1659,7 +1659,7 @@ button:hover {
 }
 @media (max-width: 320px ) {
   h2.especifico {
-    font-size: 1.4rem; /* Título menor em dispositivos pequenos */
+    font-size: 1.3rem; /* Título menor em dispositivos pequenos */
   }
 
   p {
