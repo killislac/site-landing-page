@@ -1634,3 +1634,145 @@ button:hover {
     font-size: 8vw;
   }
 }
+
+
+
+@media (max-width: 768px) {
+  h2.especifico {
+    font-size: 1.8rem; /* Reduz um pouco o tamanho do título */
+  }
+
+  p {
+    font-size: 1rem; /* Ajusta o tamanho do texto para telas menores */
+  }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 410x) {
+  h2.especifico {
+    font-size: 1.5rem; /* Título menor em dispositivos pequenos */
+  }
+
+  p {
+    font-size: 0.12rem; /* Texto ajustado para pequenos dispositivos */
+  }
+}
+@media (max-width: 320px ) {
+  h2.especifico {
+    font-size: 1.4rem; /* Título menor em dispositivos pequenos */
+  }
+
+  p {
+    font-size: 0.9rem; /* Texto ajustado para pequenos dispositivos */
+  }
+}
+
+
+/* HOME RESP*/
+@media (max-width: 768px) {
+  .hero {
+    min-height: 95vh;
+  
+  }
+  #hero h1.display-4 {
+    font-size: 3rem; /* Ajustando o título para tablets */
+  }
+  
+  #hero p.lead {
+    font-size: 2rem; /* Ajustando o subtítulo para tablets */
+  }
+  
+  #hero .btn-lg {
+    font-size: 1rem; /* Ajustando o botão para tablets */
+    padding: 10px 30px; /* Ajusta o tamanho do botão */
+  }
+}
+
+@media (max-width: 410px) {
+  .hero {
+    min-height: 89vh;
+  
+  }
+  .circle-2 {
+    width: 30vw;
+    height: 30vw;
+    top: 22vw;
+    right: -12vw;
+  }
+  .circle-3 {
+    width: 40vw;
+    height: 40vw;
+    top: 100vw;
+    right: -12vw;
+  }
+  #hero h1.display-4 {
+    font-size: 1.5rem; /* Ajustando o título para smartphones */
+  }
+  
+  #hero p.lead {
+    font-size: 0.9rem; /* Ajustando o subtítulo para smartphones */
+  }
+  
+  #hero .btn-lg {
+    font-size: 0.8rem; /* Ajustando o botão para smartphones */
+    padding: 8px 20px; /* Ajusta o tamanho do botão */
+  }
+}
+
+@media (max-width: 320px) {
+  #hero h1.display-4 {
+    font-size: 1.5rem; /* Ajustando o título para telas pequenas */
+  }
+  
+  #hero p.lead {
+    font-size: 0.9rem; /* Ajustando o subtítulo para telas pequenas */
+  }
+  
+  #hero .btn-lg {
+    font-size: 0.8rem; /* Ajustando o botão para telas pequenas */
+    padding: 6px 12px; /* Ajusta o tamanho do botão */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  /* Para telas entre 768px e 900px, os itens irão ocupar 50% da largura (dois itens por linha) */
+  .services .col-lg-4 {
+    width: 50%;
+  }
+
+  /* Centraliza o item que fica sozinho e adiciona espaço acima */
+  .services .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .services .row .col-lg-4:nth-child(3) {
+    margin: 20px auto 0; /* Centraliza o terceiro item e adiciona espaço acima */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .footer-links {
+    /* Flexbox para centralizar e organizar em colunas */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Adiciona espaçamento entre os links */
+  .footer-links a {
+    margin-bottom: 10px; /* Espaçamento entre os links */
+  }
+
+  /* Centraliza os links úteis dentro do footer */
+  .footer-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens */
+    justify-content: center;
+    text-align: center;
+  }
+}

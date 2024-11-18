@@ -69,7 +69,7 @@
           <a href="#about" class="btn btn-lg">Conheça</a>
         </div>
       </section>
-      </section>
+    
   
  
     <section id="about" class="about section" style="background-color: #035f26;;">
@@ -171,46 +171,50 @@
 
 </section><!-- /Services Section -->
 
-  <!-- Contact Section -->
-<section id="contact" class="contact-section" style="background-color: #035f26;">
+<!-- Contact Section -->
+<section id="contact" class="contact-section" style="background-color: #035f26; padding: 50px 20px;">
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up" style="text-align: center;">
-    <h2 class="especifico" style="color: white;">Agende sua Consulta</h2>
-    <p style="color: white;">Preencha as informações abaixo para agendar sua consulta via WhatsApp.</p>
+    <h2 class="especifico" style="color: white; font-size: 2rem; font-weight: bold;">Agende sua Consulta</h2>
+    <p style="color: white; font-size: 1.2rem;">Preencha as informações abaixo para agendar sua consulta via WhatsApp.</p>
   </div>
 
+  <!-- Form Container -->
   <div class="container">
-    <form id="appointmentForm" class="appointment-form">
+    <form id="appointmentForm" class="appointment-form" style=" padding-top: 10px; max-width: 600px; margin: 0 auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
       
       <!-- Nome -->
-      <label for="name">Nome:</label>
-      <input type="text" id="name" name="name" required>
-      
+      <label for="name" style="font-weight: bold; margin-bottom: 10px; display: block;">Nome:</label>
+      <input type="text" id="name" name="name" placeholder="Seu nome completo" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+
       <!-- Serviço desejado -->
-      <label for="service">Serviço desejado:</label>
-      <select id="service" name="service" required>
+      <label for="service" style="font-weight: bold; margin-bottom: 10px; display: block;">Serviço desejado:</label>
+      <select id="service" name="service" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
         <option value="Fisioterapia Pélvica">Fisioterapia Pélvica</option>
         <option value="Acupuntura">Acupuntura</option>
         <option value="Laserterapia">Laserterapia</option>
         <option value="Consultoria em Aleitamento">Consultoria em Aleitamento Materno</option>
         <option value="Outro">Outro</option>
       </select>
-      
+
       <!-- Data desejada -->
-      <label for="date">Data desejada:</label>
-      <input type="text" id="date" name="date" placeholder="Selecione a data" required>
-      
+      <label for="date" style="font-weight: bold; margin-bottom: 10px; display: block;">Data desejada:</label>
+      <input type="text" id="date" name="date" placeholder="Selecione a data" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+
       <!-- Mensagem adicional -->
-      <label for="message">Mensagem adicional (opcional):</label>
-      <textarea id="message" name="message" rows="4"></textarea>
-      
+      <label for="message" style="font-weight: bold; margin-bottom: 10px; display: block;">Mensagem adicional (opcional):</label>
+      <textarea id="message" name="message" rows="4" placeholder="Deixe uma mensagem (opcional)" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+
       <!-- Botão -->
-      <button type="submit">Agendar via WhatsApp</button>
+      <button type="submit" style="background-color:#035f26 ; color: white; padding: 12px 20px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; width: 100%; font-weight: bold; transition: background-color 0.3s;">
+        Agendar via WhatsApp
+      </button>
     </form>
   </div>
 
 </section>
+
 
 <!-- Estilo adicional -->
 <style>
