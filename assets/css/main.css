@@ -1622,7 +1622,7 @@ button:hover {
 @media (min-width: 300px) and (max-width:409px) {
   /* Para telas pequenas (smartphones) */
   .section-title h2 {
-    font-size: 1.5rem; /* Reduz tamanho do título */
+    font-size: 1.4rem; /* Reduz tamanho do título */
   }
   .section-title p {
     font-size: 1rem; /* Reduz tamanho do subtítulo */
@@ -1632,7 +1632,7 @@ button:hover {
 @media (min-width: 410px) and (max-width: 768px) {
   /* Para tablets */
   .section-title h2 {
-    font-size: 1.8rem; /* Ajusta tamanho do título */
+    font-size: 1.7rem; /* Ajusta tamanho do título */
   }
   .section-title p {
     font-size: 1.1rem; /* Ajusta tamanho do subtítulo */
