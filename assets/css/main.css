@@ -742,7 +742,7 @@ h2.especifico::after {
 }
 
 /* Responsividade */
-@media (max-width: 768px) { /* Para tablets e telas menores */
+@media (max-width: 769px) { /* Para tablets e telas menores */
   h2.especifico::before,
   h2.especifico::after {
     width: 30px; /* Diminui o tamanho */
@@ -750,7 +750,7 @@ h2.especifico::after {
   }
 }
 
-@media (max-width: 410px) { /* Para smartphones */
+@media (min-width: 410px) and (max-width:768px) { /* Para smartphones */
   h2.especifico::before,
   h2.especifico::after {
     width: 20px; /* Ainda menor para telas pequenas */
@@ -1621,7 +1621,7 @@ button:hover {
 
 @media (min-width: 300px) and (max-width:409px) {
   .section-title #titulo{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   /* Para telas pequenas (smartphones) */
   .section-title p {
@@ -1630,6 +1630,7 @@ button:hover {
 }
 
 @media (min-width: 410px) and (max-width: 768px) {
+  
   /* Para tablets */
   .section-title h2 {
     font-size: 1.7rem; /* Ajusta tamanho do título */
