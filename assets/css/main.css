@@ -1621,7 +1621,7 @@ button:hover {
 
 @media (min-width: 300px) and (max-width:420px) {
   .section-title h2{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   /* Para telas pequenas (smartphones) */
   .section-title p {
