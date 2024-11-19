@@ -219,7 +219,7 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
   const formattedDate = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
 
   // Número de WhatsApp do destinatário
-  const phoneNumber = '5511966323162'; // Substitua com o número do WhatsApp (inclua o código do país)
+  const phoneNumber = '5511993861002'; // Substitua com o número do WhatsApp (inclua o código do país)
   
   // Cria a mensagem para ser enviada
   let whatsappMessage = `Olá, meu nome é ${name}. Gostaria de agendar uma consulta de ${service} para o dia ${formattedDate}.`;
