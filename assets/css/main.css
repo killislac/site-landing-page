@@ -1790,3 +1790,38 @@ button:hover {
   color: #333; /* Cor do texto */
   white-space: nowrap; /* Garante que o texto não quebre em outra linha */
 }
+
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .logo {
+    flex-wrap: wrap; /* Permite que os elementos quebrem para outra linha */
+    justify-content: center; /* Centraliza os elementos */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .logo .sitename img {
+    width: 40px; /* Reduz o tamanho da logo */
+  }
+
+  .logo .subtitle {
+    font-size: 14px; /* Reduz o tamanho do texto */
+    margin-left: 0; /* Remove espaçamento lateral */
+    margin-top: 5px; /* Adiciona espaçamento superior */
+  }
+}
+
+/* Ajustes para telas muito pequenas (ex.: celulares) */
+@media (min-width: 300px) and (max-width: 480px){
+  .logo {
+    flex-direction: column; /* Alinha logo e texto verticalmente */
+  }
+
+  .logo .sitename img {
+    width: 35px; /* Reduz ainda mais o tamanho da logo */
+  }
+
+  .logo .subtitle {
+    font-size: 13px; /* Ajusta o tamanho do texto */
+  }
+}
