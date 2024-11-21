@@ -1812,9 +1812,10 @@ button:hover {
 }
 
 /* Ajustes para telas muito pequenas (ex.: celulares) */
-@media (min-width: 300px) and (max-width: 480px){
+@media (min-width: 300px) and (max-width: 480px) {
   .logo {
     flex-direction: column; /* Alinha logo e texto verticalmente */
+    align-items: center; /* Centraliza o conteúdo */
   }
 
   .logo .sitename img {
@@ -1822,6 +1823,7 @@ button:hover {
   }
 
   .logo .subtitle {
-    font-size: 13px; /* Ajusta o tamanho do texto */
+    display: none; /* Esconde o subtítulo em telas pequenas */
   }
 }
+
