@@ -1771,3 +1771,22 @@ button:hover {
     text-align: center;
   }
 }
+
+
+.logo {
+  display: flex; /* Organiza os elementos em linha */
+  align-items: center; /* Alinha a logo e o texto verticalmente */
+}
+
+.logo .sitename img {
+  display: block; /* Garante que a logo não tenha espaços extras */
+  width: 800px; /* Tamanho da logo */
+  height: auto; /* Mantém proporção da imagem */
+}
+
+ .subtitle {
+  font-size: 2px; /* Ajuste do tamanho da fonte */
+  margin-left: 10px; /* Espaçamento entre logo e título */
+  color: #333; /* Cor do texto */
+  white-space: nowrap; /* Garante que o texto não quebre em outra linha */
+}
