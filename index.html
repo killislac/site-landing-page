@@ -38,12 +38,11 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-        <li><a href="javascript:void(0)" class="nav-link" data-target="hero">Home</a></li>
-<li><a href="javascript:void(0)" class="nav-link" data-target="about">Nossa médica</a></li>
-<li><a href="javascript:void(0)" class="nav-link" data-target="services">Serviços</a></li>
-<li><a href="javascript:void(0)" class="nav-link" data-target="contact">Contatos</a></li>
-<li><a href="javascript:void(0)" class="nav-link" data-target="agendar">Agende uma consulta</a></li>
-
+          <li><a class="nav-link" data-target="hero">Home</a></li>
+          <li><a class="nav-link" data-target="about">Nossa médica</a></li>
+          <li><a class="nav-link" data-target="services">Serviços</a></li>
+          <li><a class="nav-link" data-target="contact">Contatos</a></li>
+          <li><a class="nav-link" data-target="agendar">Agende uma consulta</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -51,7 +50,38 @@
 
     </div>
   </header>
+<script>document.addEventListener('DOMContentLoaded', function () {
+  // Seleciona o botão de alternância do menu (ícone de hambúrguer)
+  const navToggle = document.querySelector('.mobile-nav-toggle');
+  const navMenu = document.querySelector('#navmenu');
+  
+  // Seleciona todos os links de navegação
+  const navLinks = document.querySelectorAll('.nav-link');
 
+  // Adiciona o evento de clique no ícone de hambúrguer
+  navToggle.addEventListener('click', function () {
+    // Alterna a visibilidade do menu
+    navMenu.classList.toggle('active');
+  });
+
+  // Adiciona o evento de clique nos links para navegação interna
+  navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      // Obtém o valor do atributo `data-target`
+      const targetSection = document.querySelector(`#${link.getAttribute('data-target')}`);
+      
+      if (targetSection) {
+        // Rola a página para a seção desejada
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+        
+        // Fecha o menu após o clique (para mobile)
+        navMenu.classList.remove('active');
+      }
+    });
+  });
+});
+
+</script>
   <main class="main">
     <!-- Hero Section -->
     <section id="hero" class="hero section">
