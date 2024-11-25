@@ -38,11 +38,12 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" active>Home</a></li>
-          <li><a href="#about">Nossa médica</a></li>
-          <li><a href="#services">Serviços</a></li>
-          <li><a href="#contact">Contatos</a></li>
-          <li><a href="#contact">Agende uma consulta</a></li>
+        <li><a href="javascript:void(0)" class="nav-link" data-target="hero">Home</a></li>
+<li><a href="javascript:void(0)" class="nav-link" data-target="about">Nossa médica</a></li>
+<li><a href="javascript:void(0)" class="nav-link" data-target="services">Serviços</a></li>
+<li><a href="javascript:void(0)" class="nav-link" data-target="contact">Contatos</a></li>
+<li><a href="javascript:void(0)" class="nav-link" data-target="agendar">Agende uma consulta</a></li>
+
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -52,175 +53,161 @@
   </header>
 
   <main class="main">
-      <section id="hero" class="hero section">
-        <!-- Elementos gráficos -->
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
-        <div class="circle circle-3"></div>
-        <div class="decor decor-1">+</div>
-        <div class="decor decor-2">+</div>
-    
-        <div class="container d-flex flex-column justify-content-center align-items-center position-relative">
-          <!-- Título -->
-          <h1 class="display-4">
-            Bem-vindo ao nosso <span>Consultório</span>
-          </h1>
-          
-          <!-- Subtítulo -->
-          <p class="lead">
-            Fisioterapia Pélvica Especializada para o seu bem-estar.
-          </p>
-          
-          <!-- Botão -->
-          <a href="#about" class="btn btn-lg">Conheça</a>
-        </div>
-      </section>
-    
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <!-- Elementos gráficos -->
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
+      <div class="decor decor-1">+</div>
+      <div class="decor decor-2">+</div>
   
- 
-    <section id="about" class="about section" style="background-color: #035f26;;">
+      <div class="container d-flex flex-column justify-content-center align-items-center position-relative">
+        <!-- Título -->
+        <h1 class="display-4">
+          Bem-vindo ao nosso <span>Consultório</span>
+        </h1>
+        
+        <!-- Subtítulo -->
+        <p class="lead">
+          Fisioterapia Pélvica Especializada para o seu bem-estar.
+        </p>
+        
+        <!-- Botão -->
+         <a class="btn btn-lg" onclick="scrollToAbout()">Conheça</a>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 style="color: aliceblue; " class="especifico">Nossa Fisioterapeuta</h2>
-        <img src="img/fotoMedica.png" alt="" style="height: 200px; width: 200px;">
-        <p style="color: aliceblue;">Elaine Joyce Gomes dos Santos é fisioterapeuta graduada desde 2002, com especializações em Fisiologia do Exercício no Envelhecimento (Geriatria) pela USP e Fisioterapia na Saúde da Mulher e do Homem pela Santa Casa de São Paulo. Ela também é Acupunturista, RPGista, Terapeuta e Prescritora de Cannabis Medicinal, com foco na saúde da mulher. Elaine atende em consultório no Tatuapé, São Paulo, realiza atendimentos domiciliares e online, oferecendo tratamentos personalizados para todo o Brasil.</p>
       </div>
-       
     </section>
-
- <!-- Services Section -->
-<section id="services" class="services section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Serviços</h2>
-    <p>Conheça nossos serviços:</p>
-  </div>
-
-  <div class="container">
-
-    <div class="row gy-4">
-
-      <!-- Fisioterapia Pélvica -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-item position-relative">
-          <div class="icon">
-            <i class="bi bi-activity"></i>
+  
+    <!-- About Section -->
+    <section id="about" class="about section" style="background-color: #035f26;">
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: aliceblue;" class="especifico">Nossa Fisioterapeuta</h2>
+        <img src="img/fotoMedica.png" alt="" style="height: 200px; width: 200px;">
+        <p style="color: aliceblue;">
+          Elaine Joyce Gomes dos Santos é fisioterapeuta graduada desde 2002, com especializações em Fisiologia do Exercício no Envelhecimento (Geriatria) pela USP e Fisioterapia na Saúde da Mulher e do Homem pela Santa Casa de São Paulo. Ela também é Acupunturista, RPGista, Terapeuta e Prescritora de Cannabis Medicinal, com foco na saúde da mulher. Elaine atende em consultório no Tatuapé, São Paulo, realiza atendimentos domiciliares e online, oferecendo tratamentos personalizados para todo o Brasil.
+        </p>
+      </div>
+    </section>
+  
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Serviços</h2>
+        <p>Conheça nossos serviços:</p>
+      </div>
+  
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Fisioterapia Pélvica -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-activity"></i>
+              </div>
+              <a class="stretched-link">
+                <h3>Fisioterapia Pélvica</h3>
+              </a>
+              <p>Reabilitação de disfunções do assoalho pélvico, prevenindo ou tratando condições como incontinência urinária, fecais, disfunções sexuais, dor pélvica crônica e preparando gestantes para o parto.</p>
+            </div>
           </div>
-          <a class="stretched-link">
-            <h3>Fisioterapia Pélvica</h3>
-          </a>
-          <p>Reabilitação de disfunções do assoalho pélvico, prevenindo ou tratando condições como incontinência urinária, fecais,disfunções sexuais, dor pélvica crônica e preparando gestantes para o parto.</p>
+  
+          <!-- Acupuntura -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-broadcast"></i>
+              </div>
+              <a class="stretched-link">
+                <h3>Acupuntura</h3>
+              </a>
+              <p>Tratamento milenar para promover o equilíbrio do corpo e mente, aliviando dores e outros sintomas.</p>
+            </div>
+          </div>
+  
+          <!-- Laserterapia -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-easel"></i>
+              </div>
+              <a class="stretched-link">
+                <h3>Laserterapia</h3>
+              </a>
+              <p>Tratamento que utiliza luz laser para acelerar a cicatrização e reduzir a dor.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Terapia Canábica e Consultoria em Aleitamento -->
+        <div class="row gy-4 justify-content-center mt-4">
+          <!-- Terapia Canábica -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-bounding-box-circles"></i>
+              </div>
+              <a class="stretched-link">
+                <h3>Terapia Canábica</h3>
+              </a>
+              <p>Prescrição de Cannabis Medicinal para melhorar a saúde geral de mulheres e homens, com foco no bem-estar.</p>
+            </div>
+          </div>
+  
+          <!-- Consultoria em Aleitamento Materno -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-calendar4-week"></i>
+              </div>
+              <a class="stretched-link">
+                <h3>Consultoria em Aleitamento Materno</h3>
+              </a>
+              <p>Apoio para mães que buscam orientação e ajuda com a amamentação.</p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Acupuntura -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-item position-relative">
-          <div class="icon">
-            <i class="bi bi-broadcast"></i>
-          </div>
-          <a class="stretched-link">
-            <h3>Acupuntura</h3>
-          </a>
-          <p>Tratamento milenar para promover o equilíbrio do corpo e mente, aliviando dores e outros sintomas.</p>
-        </div>
+    </section>
+  
+    <!-- Contact Section -->
+    <section id="agendar" class="agendar-section" style="background-color: #035f26; padding: 50px 20px;">
+      <div class="container section-title" data-aos="fade-up" style="text-align: center;">
+        <h2 style="color: white;" class="especifico">Agende sua Consulta</h2>
+        <p style="color: white; font-size: 1.2rem;">Preencha as informações abaixo para agendar sua consulta via WhatsApp.</p>
       </div>
-
-      <!-- Laserterapia -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-item position-relative">
-          <div class="icon">
-            <i class="bi bi-easel"></i>
-          </div>
-          <a class="stretched-link">
-            <h3>Laserterapia</h3>
-          </a>
-          <p>Tratamento que utiliza luz laser para acelerar a cicatrização e reduzir a dor.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-    </div>
-
-    <!-- Centralizando os dois últimos itens com margem superior -->
-    <div class="row gy-4 justify-content-center mt-4"> <!-- mt-4 adiciona o espaço em cima -->
-      <!-- Terapia Canábica -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="service-item position-relative">
-          <div class="icon">
-            <i class="bi bi-bounding-box-circles"></i>
-          </div>
-          <a class="stretched-link">
-            <h3>Terapia Canábica</h3>
-          </a>
-          <p>Prescrição de Cannabis Medicinal para melhorar a saúde geral de mulher e homens, com foco no bem-estar.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <!-- Consultoria em Aleitamento Materno -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-        <div class="service-item position-relative">
-          <div class="icon">
-            <i class="bi bi-calendar4-week"></i>
-          </div>
-          <a class="stretched-link">
-            <h3>Consultoria em Aleitamento Materno</h3>
-          </a>
-          <p>Apoio para mães que buscam orientação e ajuda com a amamentação.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-    </div>
-
-  </div>
-
-</section><!-- /Services Section -->
-
-<!-- Contact Section -->
-<section id="contact" class="contact-section" style="background-color: #035f26; padding: 50px 20px;">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up" style="text-align: center;">
-    <h2 style="color: white;" class="especifico">Agende sua Consulta</h2>
-    <p style="color: white; font-size: 1.2rem;">Preencha as informações abaixo para agendar sua consulta via WhatsApp.</p>
-  </div>
-
-  <!-- Form Container -->
-  <div class="container">
-    <form id="appointmentForm" class="appointment-form" style=" padding-top: 10px; max-width: 600px; margin: 0 auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-      
-      <!-- Nome -->
-      <label for="name" style="font-weight: bold; margin-bottom: 10px; display: block;">Nome:</label>
-      <input type="text" id="name" name="name" placeholder="Seu nome completo" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
-
-      <!-- Serviço desejado -->
-      <label for="service" style="font-weight: bold; margin-bottom: 10px; display: block;">Serviço desejado:</label>
-      <select id="service" name="service" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
-        <option value="Fisioterapia Pélvica">Fisioterapia Pélvica</option>
-        <option value="Acupuntura">Acupuntura</option>
-        <option value="Laserterapia">Laserterapia</option>
-        <option value="Consultoria em Aleitamento">Consultoria em Aleitamento Materno</option>
-        <option value="Outro">Outro</option>
-      </select>
-
-      <!-- Data desejada -->
-      <label for="date" style="font-weight: bold; margin-bottom: 10px; display: block;">Data desejada:</label>
-      <input type="text" id="date" name="date" placeholder="Selecione a data" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
-
-      <!-- Mensagem adicional -->
-      <label for="message" style="font-weight: bold; margin-bottom: 10px; display: block;">Mensagem adicional (opcional):</label>
-      <textarea id="message" name="message" rows="4" placeholder="Deixe uma mensagem (opcional)" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
-
-      <!-- Botão -->
-      <button type="submit" style="background-color:#035f26 ; color: white; padding: 12px 20px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; width: 100%; font-weight: bold; transition: background-color 0.3s;">
-        Agendar via WhatsApp
-      </button>
-    </form>
-  </div>
-
-</section>
-
+  
+      <div class="container">
+        <form id="appointmentForm" class="appointment-form" style="padding-top: 10px; max-width: 600px; margin: 0 auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <!-- Nome -->
+          <label for="name" style="font-weight: bold; margin-bottom: 10px; display: block;">Nome:</label>
+          <input type="text" id="name" name="name" placeholder="Seu nome completo" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+  
+          <!-- Serviço desejado -->
+          <label for="service" style="font-weight: bold; margin-bottom: 10px; display: block;">Serviço desejado:</label>
+          <select id="service" name="service" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+            <option value="Fisioterapia Pélvica">Fisioterapia Pélvica</option>
+            <option value="Acupuntura">Acupuntura</option>
+            <option value="Laserterapia">Laserterapia</option>
+            <option value="Consultoria em Aleitamento">Consultoria em Aleitamento Materno</option>
+            <option value="Outro">Outro</option>
+          </select>
+  
+          <!-- Data desejada -->
+          <label for="date" style="font-weight: bold; margin-bottom: 10px; display: block;">Data desejada:</label>
+          <input type="text" id="date" name="date" placeholder="Selecione a data" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+  
+          <!-- Mensagem adicional -->
+          <label for="message" style="font-weight: bold; margin-bottom: 10px; display: block;">Mensagem adicional (opcional):</label>
+          <textarea id="message" name="message" rows="4" placeholder="Deixe uma mensagem (opcional)" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+  
+          <!-- Botão -->
+          <button type="submit" style="background-color:#035f26; color: white; padding: 12px 20px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; width: 100%; font-weight: bold; transition: background-color 0.3s;">
+            Agendar via WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
 
 <!-- Estilo adicional -->
 <style>
@@ -285,7 +272,7 @@
 
 
   </main>
-  <footer id="footer" class="footer text-dark py-5" style="background-color: #eaf8f2;">
+  <footer id="contact" class="contact-section" class="footer text-dark py-5" style="background-color: #eaf8f2;">
     <div class="container footer-top">
       <div class="row gy-4 text-center">
     

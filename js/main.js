@@ -199,3 +199,30 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+document.addEventListener('DOMContentLoaded', function () {
+  // Adiciona o evento de click nos links
+  const links = document.querySelectorAll('.nav-link');
+
+  links.forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault(); // Previne o comportamento padrão de navegação
+
+      const targetId = event.target.getAttribute('data-target'); // Pega o ID da seção
+      const targetElement = document.getElementById(targetId); // Encontra a seção
+
+      if (targetElement) {
+        // Obtém a altura do cabeçalho
+        const headerHeight = document.querySelector('.header').offsetHeight;
+
+        // Ajuste para garantir que a rolagem não sobreponha o título
+        const offset = 0.5;  // Ajuste este valor conforme necessário
+
+        // Rola suavemente até a seção, com um deslocamento para evitar que o cabeçalho sobreponha o título
+        window.scrollTo({
+          top: targetElement.offsetTop - headerHeight - offset, // Desloca um pouco para cima
+          behavior: 'smooth'  // Rolagem suave
+        });
+      }
+    });
+  });
+});
